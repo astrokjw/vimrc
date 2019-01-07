@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/data/data/com.termux/files/home/algo/jongman/ch3_paradigm'
+let g:netrw_dirhist_2='/data/data/com.termux/files/home/algo/jongman/ch3_paradigm/divide-conquer'
+let g:netrw_dirhist_3='/data/data/com.termux/files/home/algo/cracking/01_array_string'
+let g:netrw_dirhist_4='/data/data/com.termux/files/home/algo/cracking'
