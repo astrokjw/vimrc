@@ -1,7 +1,3 @@
-eval "`dircolors -b`"
-alias ls='ls --color=auto -F'
-alias ll='ls -l'
-
 # netj's bash default variables 
 # Author:   Jaeho Shin <netj@sparcs.kaist.ac.kr> 
 # Created:   2002/07/15 
@@ -41,7 +37,7 @@ PROMPT_UPDATE() {
         $HOME*) PWD_SHORT="${PWD/$HOME/~}" ;; 
         *)      PWD_SHORT="$PWD" ;; 
     esac 
-    PS1="($LOGNAME@$TTY@$HOSTNAME_SHORT)-($PROMPT_DATE)$WEATHER_INFO-($PWD_SHORT)n" 
+    PS1="($PWD_SHORT)-($LOGNAME@$TTY@$HOSTNAME_SHORT)-($PROMPT_DATE)$WEATHER_INFOn" 
     if [ ! -n "$COLUMNS" ]; then 
         local fillsize=0 
     else 
@@ -58,7 +54,7 @@ PROMPT_UPDATE() {
         local prefix=${PWD_SHORT:0:5} 
         local PWD_SHORT="$prefix..${PWD_SHORT:$((2+${#prefix}-${fillsize}))}" 
     fi 
-    PS1="$GRAY($RED$LOGNAME$GRAY@$GREEN$TTY$GRAY@$BLUE$HOSTNAME_SHORT$GRAY)-($PROMPT_DATEFMT$GRAY)$WEATHER_INFOFMT-$fill($YELLOW$PWD_SHORT$GRAY)$NO_COLOR\r\n$ " 
+    PS1="$GRAY($YELLOW$PWD_SHORT$GRAY)-$fill($RED$LOGNAME$GRAY@$GREEN$TTY$GRAY@$BLUE$HOSTNAME_SHORT$GRAY)-($PROMPT_DATEFMT$GRAY)$WEATHER_INFOFMT$NO_COLOR\r\n$ " 
 #$GRAY($RED\j$GRAY:$GREEN\#$GRAY:$BLUE\$?$GRAY)\\$ $NO_COLOR" 
 } 
 
