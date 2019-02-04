@@ -1,2 +1,2 @@
-source .alias
-source .prompt
+source ~/.alias
+source ~/.prompt
