@@ -23,7 +23,6 @@ set textwidth=120
 " turn syntax highlighting on
 set t_Co=256
 syntax on
-colorscheme monochrome
 " turn line numbers on
 set number relativenumber
 " highlight matching braces
@@ -100,3 +99,9 @@ augroup END
 
 "backspace problem in mac
 set backspace=indent,eol,start
+
+execute pathogen#infect()
+"colorscheme monochrome
+colorscheme gruvbox
+set background=dark    " Setting dark mode
+"set background=light   " Setting light mode
