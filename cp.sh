@@ -3,6 +3,6 @@ cp prompt ~/.prompt
 cp alias ~/.alias
 cp profile ~/.bash_profile
 cp bashrc ~/.bashrc
-rm -rf ~/.vim
+mv ~/.vim ~/.vim_backup
 cp -r vim ~/.vim
 cp vimrc ~/.vimrc
