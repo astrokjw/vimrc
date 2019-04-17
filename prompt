@@ -41,7 +41,7 @@ PROMPT_UPDATE() {
     if [ ! -n "$COLUMNS" ]; then 
         local fillsize=0 
     else 
-        local fillsize=$((${COLUMNS}-${#PS1})) 
+        local fillsize=$((${COLUMNS}-${#PS1}-1)) 
     fi 
     local fill="" 
     if [ $fillsize -gt 0 ]; then 
